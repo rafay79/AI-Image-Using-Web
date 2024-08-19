@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Poppins', sans-serif;
+}
+
+.img-gen{
+    height:40vh;
+    background-image:url("img1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-position: center;
+}
+
+.img-gen::before{
+    content: '';
+    position: absolute;
+    opacity: 0.2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+
+.content{
+   color: white;
+   padding: 0 15px;
+   max-width: 760px;
+   text-align: center;
+   position: relative;
+
+}
+
+h1{
+   font-size: 60px;
+   font-weight: 600;
+   margin-bottom: 20px;
+   text-transform: uppercase;
+   letter-spacing: 2px;
+   line-height: 60px;
+   text-align: center;
+   color: white;
+   text-shadow: 2px 2px 4px #000000;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+p{
+   font-size: 20px;
+   font-weight: 300;
+   margin-top: 10px;
+   text-align: center;
+   color: white;
+   text-shadow: 2px 2px 4px #000000;
+   font-family: 'Poppins', sans-serif;
+}
+
+.generate-form{
+ height: 56px;
+ width: 100%;
+ background-color: rgb(255, 255, 255);
+ border-radius: 30px;
+ display: flex;
+ align-items: center;
+ margin: 45px 0 15px;
+ padding: 6px;
+ justify-content: space-between;
+}
+
+.form-input{
+   border: none;
+   outline: none;
+   width: 100%;
+   height: 100%;
+   padding: 0 15px;
+   font-size: 10px;
+   font-family: 'Poppins', sans-serif;
+   padding: 0 17px;
+
+}
+
+.controls{
+   display: flex;
+   align-items: center;
+   height: 100%;
+   gap: 15px;
+}
+
+.img-quantity{
+   border: none;
+   outline: none;
+   padding: 0 15px;
+   font-size: 15px;
+   font-family: 'Poppins', sans-serif;
+   background: none;
+   border-radius: 30px;
+}
+
+.generate-btn{
+   font-size: 15px;
+   font-family: 'Poppins', sans-serif;
+   outline: none;
+   border: none;
+   color: white;
+   cursor: pointer;
+   
+   border-radius:30px;
+   padding: 10px 25px;
+   background:blue; 
+
+}
+
+.img-gallery{
+    display:flex;
+    gap: 15px;
+    padding: 0 15px;
+    max-width: 1250px;
+    margin :50px auto;
+    justify-content: center;
+    flex-wrap: wrap;
+
+
+
+}
+
+.img-gallery .img-card{
+   width: 285px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background-color:white;
+   aspect-ratio: 1/1;
+   border-radius: 5px;
+   overflow: hidden;
+ position: relative;
+}
+
+.img-gallery .img-card img{
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+
+}
+
+.img-gallery .img-card .download-btn img{
+   width: 14px;
+   height: 14px;
+
+}
+
+.img-gallery .img-card.loading img{
+     width: 88px;
+     height: 88px;
+
+
+}
+.img-gallery .img-card .download-btn{
+   position:absolute;
+   bottom:55px;
+   right: 385px;
+   background-color: rgb(255, 250, 250);
+   height: 36px;
+   width: 36px;
+   border-radius:50% ;
+   display:none;
+   align-items: center;
+   justify-content: center;
+ 
+
+}
+
+.img-gallery .img-card:not(.loading):hover .download-btn{
+   display: flex;
+}
+
+@media screen and  (max-width:760px) {
+    .img-gen h1{
+        font-size:1.8rem;
+    }
+
+     .img-gen p{
+        font-size:1rem;
+    }
+
+     .img-gen.generate-form{
+        margin-top: 30px;
+        height: 52px;
+        display: block;
+    }
+
+    .generate-form .controls{
+        height: 40px;
+        margin-top: 15px;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    .generate-form .img-quantity{
+        color:white;
+    }
+
+    .generate-form .img-quantity option{
+        color:black
+    }
+
+    .generate-form .generate-btn{
+        height: 100%;
+    }
+
+    
+
+   .img-gallery{
+        margin-top:20px;
+    }
+
+
+    .img-gallery .img-card:not(.loading).download-btn{
+   display: flex;
+}
+       
+}
+
+@media screen and  (max-width:550px) {
+
+    .img-gallery .img-card{
+        width: 100% ;
+    }
+}
+
+
+
+
+
